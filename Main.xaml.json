@@ -1,0 +1,105 @@
+{
+  "DisplayName": "Main",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_OrchestratorQueueName",
+      "DisplayName": "in_OrchestratorQueueName",
+      "Category": null,
+      "Tooltip": "Allows the Orchestrator queue name to be passed as an argument, instead of only being defined in the configuration file.",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_SEEmailAlerts",
+      "DisplayName": "in_SEEmailAlerts",
+      "Category": null,
+      "Tooltip": "Allows the System exception emails to be passed as an argument, instead of only being defined in the configuration file.",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_StatusreportEmail",
+      "DisplayName": "in_StatusreportEmail",
+      "Category": null,
+      "Tooltip": "Allows the System Report emails to be passed as an argument, instead of only being defined in the configuration file.",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_SAPSystem",
+      "DisplayName": "in_SAPSystem",
+      "Category": null,
+      "Tooltip": "Please create all process specific Assets as In Arguments",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_Record_Video",
+      "DisplayName": "in_Record_Video",
+      "Category": null,
+      "Tooltip": "The input argument needs to be set to string, becuase the default declaration of Boolean is set to False . The value should be either TRUE or  FALSE",
+      "Placeholder": "True",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_TestingDebug",
+      "DisplayName": "in_TestingDebug",
+      "Category": null,
+      "Tooltip": "Argument defined to control the config values that needs to be used",
+      "Placeholder": "False",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_OrchestratorQueueFolder",
+      "DisplayName": "in_OrchestratorQueueFolder",
+      "Category": null,
+      "Tooltip": "Allow Folder Name to be passed as argument instead of providing in config file",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_MaxNumberOfTransactions",
+      "DisplayName": "in_MaxNumberOfTransactions",
+      "Category": null,
+      "Tooltip": "-1: Processing all New Queue Items\nAny Number: To Process that many Queue Items in 1 job run (batch size)",
+      "Placeholder": "-1",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    }
+  ]
+}

@@ -1,0 +1,243 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SAP_POSelection" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="994,2605" sap2010:WorkflowViewState.IdRef="SAP_POSelection_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Core.Activities.SAP</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Selects all the POs and updates the AFS. Confrims the POPup with yes. Comes back to the previous home page" DisplayName="SAP_POSelection" sap:VirtualizedContainerService.HintSize="822,2540" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="780,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;# Start - SAP_POSelection #&quot;]" />
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="SingleWindow" DisplayName="Use Application: Purchase Order Confirmations Overview" sap:VirtualizedContainerService.HintSize="780,741" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="b5d7c66d-cddd-4115-87c2-81c22f7e42b9" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,452" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ucas:SelectMenuItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Select Menu Item 'Toolbar  tbar[1]'" sap:VirtualizedContainerService.HintSize="334,159" sap2010:WorkflowViewState.IdRef="SelectMenuItem_1" Item="Select all   (Shift+F2)">
+              <ucas:SelectMenuItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="8">
+                  <x:String xml:space="preserve">Select all   (Shift+F2)</x:String>
+                  <x:String xml:space="preserve">Unselect all   (Shift+F4)</x:String>
+                  <x:String xml:space="preserve">Sort   (F8)</x:String>
+                  <x:String xml:space="preserve">Update AFS   (F5)</x:String>
+                  <x:String xml:space="preserve">Size Level   (F7)</x:String>
+                  <x:String xml:space="preserve">Purchase order   (Ctrl+F2)</x:String>
+                  <x:String xml:space="preserve">SIM Data   (Shift+F8)</x:String>
+                  <x:String xml:space="preserve">DPOC Cust. Instr.   (F9)</x:String>
+                </scg:List>
+              </ucas:SelectMenuItem.Items>
+              <ucas:SelectMenuItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0d038ee0-6fc6-4a88-9749-7f76d3f1c257" InformativeScreenshot="8f96b975107e033055a3ce38de237a60" Selector="&lt;sap id='tbar[1]' /&gt;" WaitForReady="COMPLETE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </ucas:SelectMenuItem.Target>
+            </ucas:SelectMenuItem>
+            <ucas:SelectMenuItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Select Menu Item 'Toolbar  tbar[1]'" sap:VirtualizedContainerService.HintSize="334,159" sap2010:WorkflowViewState.IdRef="SelectMenuItem_2" Item="Update AFS   (F5)">
+              <ucas:SelectMenuItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="8">
+                  <x:String xml:space="preserve">Select all   (Shift+F2)</x:String>
+                  <x:String xml:space="preserve">Unselect all   (Shift+F4)</x:String>
+                  <x:String xml:space="preserve">Sort   (F8)</x:String>
+                  <x:String xml:space="preserve">Update AFS   (F5)</x:String>
+                  <x:String xml:space="preserve">Size Level   (F7)</x:String>
+                  <x:String xml:space="preserve">Purchase order   (Ctrl+F2)</x:String>
+                  <x:String xml:space="preserve">SIM Data   (Shift+F8)</x:String>
+                  <x:String xml:space="preserve">DPOC Cust. Instr.   (F9)</x:String>
+                </scg:List>
+              </ucas:SelectMenuItem.Items>
+              <ucas:SelectMenuItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0d038ee0-6fc6-4a88-9749-7f76d3f1c257" InformativeScreenshot="8f96b975107e033055a3ce38de237a60" Selector="&lt;sap id='tbar[1]' /&gt;" WaitForReady="COMPLETE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </ucas:SelectMenuItem.Target>
+            </ucas:SelectMenuItem>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-7, -7, 1934, 1094" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE8SURBVFhHYxgFo2AUjIJBAxxrVls61ay5T2dcC7Ue7AAnoMB/emHHmjWz7KtXMkGtp68DgJbPsCtfzQi1GgLo5QCg5dMcy1cgLH//5UcECG89fa+5dsnR/5Ti0nkH/ztWrcJuefWaKXYVq1B9/v7Lz//Uwk/ffP6f3LX2v335cmyWT7KqQPI5DGAziBwMsjy+ddl/m6IFQMtWo1s+wbZ4CablIIDNMFLxk9ef/se1LMVuec2aPrMStGBHBtgMJAWDLI8FWV6M1fIeqDW4AdCQxSB89f7LfWsPXfm/9uBlknBsCzDYsVlevboLagVxwKZovotd6ZL/diWLScL25cuwWL6mA2os8QBoCFXKAWCwt0GNJA1QqSBqhhpHOqDUAUCfN0KNIg8AHaAJNGg+mTgXaswoGAWjYBSQCBgYAMLf0dVJBbU9AAAAAElFTkSuQmCC" InformativeScreenshot="1ee7957eae1f6c8688704961ddc6be72.png" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Purchase Order Confirmations Overview' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Warning!!'" sap:VirtualizedContainerService.HintSize="780,886" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="b5d7c66d-cddd-4115-87c2-81c22f7e42b9" Version="V1">
+      <uix:NCheckState.IfExists>
+        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="476,670" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Updating All POs&quot;]" />
+          <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="SingleWindow" DisplayName="Use Application: Warning!!" sap:VirtualizedContainerService.HintSize="434,445" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="e9d2e586-d8b8-43f6-99b4-94e07e0ded5f" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <uix:NClick ClickType="Single" DisplayName="Click 'Yes'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e9d2e586-d8b8-43f6-99b4-94e07e0ded5f" Version="V1">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable DesignTimeRectangle="46, 98, 83, 22" ElementType="Button" FriendlyName="'Yes'" FullSelectorArgument="&lt;sap id='usr/btnSPOP-OPTION1' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/btnSPOP-OPTION1' check:text='Yes' /&gt;" Guid="f3821105-ea1e-4719-b1aa-63bf35f9e930" InformativeScreenshot="03cdfae598adc4076e145b54138111ef.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Warning!!' idx='*' /&gt;" SearchSteps="Selector" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                  </uix:NClick.Target>
+                </uix:NClick>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="175, 251, 336, 128" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE8SURBVFhHYxgFo2AUjIJBAxxrVls61ay5T2dcC7Ue7AAnoMB/emHHmjWz7KtXMkGtp68DgJbPsCtfzQi1GgLo5QCg5dMcy1cgLH//5UcECG89fa+5dsnR/5Ti0nkH/ztWrcJuefWaKXYVq1B9/v7Lz//Uwk/ffP6f3LX2v335cmyWT7KqQPI5DGAziBwMsjy+ddl/m6IFQMtWo1s+wbZ4CablIIDNMFLxk9ef/se1LMVuec2aPrMStGBHBtgMJAWDLI8FWV6M1fIeqDW4AdCQxSB89f7LfWsPXfm/9uBlknBsCzDYsVlevboLagVxwKZovotd6ZL/diWLScL25cuwWL6mA2os8QBoCFXKAWCwt0GNJA1QqSBqhhpHOqDUAUCfN0KNIg8AHaAJNGg+mTgXaswoGAWjYBSQCBgYAMLf0dVJBbU9AAAAAElFTkSuQmCC" InformativeScreenshot="4b25a2e9ab4c8e5145f44ca2289b2dff.png" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Warning!!' idx='*' /&gt;" />
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+        </Sequence>
+      </uix:NCheckState.IfExists>
+      <uix:NCheckState.Target>
+        <uix:TargetAnchorable DesignTimeRectangle="0, 0, 336, 128" FriendlyName="'Warning!!'" Guid="2fffb94d-5cc4-4d50-bcef-28ad7fe55293" ImageBase64="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" InformativeScreenshot="831e5b6ce26a756f89cf25c2ca7774bf.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Warning!!' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive" WaitForReadyArgument="Complete">
+          <uix:TargetAnchorable.FuzzySelectorArgument>
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String" Value="" />
+            </InArgument>
+          </uix:TargetAnchorable.FuzzySelectorArgument>
+        </uix:TargetAnchorable>
+      </uix:NCheckState.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NCheckState>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="SingleWindow" DisplayName="Use Application: Purchase Order Confirmations Overview" sap:VirtualizedContainerService.HintSize="780,448" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" OpenMode="Never" ScopeGuid="b5d7c66d-cddd-4115-87c2-81c22f7e42b9" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <ucas:SelectMenuItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Select Menu Item - Back'" sap:VirtualizedContainerService.HintSize="334,159" sap2010:WorkflowViewState.IdRef="SelectMenuItem_3" Item="Exit   (Shift+F3)">
+            <ucas:SelectMenuItem.Items>
+              <scg:List x:TypeArguments="x:String" Capacity="16">
+                <x:String>Enter</x:String>
+                <x:String>Close Command Field</x:String>
+                <x:String xml:space="preserve">Back   (F3)</x:String>
+                <x:String xml:space="preserve">Exit   (Shift+F3)</x:String>
+                <x:String xml:space="preserve">Cancel   (F12)</x:String>
+                <x:String xml:space="preserve">Print   (Ctrl+P)</x:String>
+                <x:String xml:space="preserve">First page   (Ctrl+Page up)</x:String>
+                <x:String xml:space="preserve">Previous page   (Page up)</x:String>
+                <x:String xml:space="preserve">Next page   (Page down)</x:String>
+                <x:String xml:space="preserve">Last page   (Ctrl+Page down)</x:String>
+                <x:String>New GUI Window</x:String>
+                <x:String>Generates shortcut</x:String>
+                <x:String xml:space="preserve">Help   (F1)</x:String>
+                <x:String>Customize Local Layout (Alt+F12)</x:String>
+              </scg:List>
+            </ucas:SelectMenuItem.Items>
+            <ucas:SelectMenuItem.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0d038ee0-6fc6-4a88-9749-7f76d3f1c257" InformativeScreenshot="e4abe66286a9e3d5595f5c0addfc729b" Selector="&lt;sap id='tbar[0]' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+              </ui:Target>
+            </ucas:SelectMenuItem.Target>
+          </ucas:SelectMenuItem>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-7, -7, 1934, 1094" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE8SURBVFhHYxgFo2AUjIJBAxxrVls61ay5T2dcC7Ue7AAnoMB/emHHmjWz7KtXMkGtp68DgJbPsCtfzQi1GgLo5QCg5dMcy1cgLH//5UcECG89fa+5dsnR/5Ti0nkH/ztWrcJuefWaKXYVq1B9/v7Lz//Uwk/ffP6f3LX2v335cmyWT7KqQPI5DGAziBwMsjy+ddl/m6IFQMtWo1s+wbZ4CablIIDNMFLxk9ef/se1LMVuec2aPrMStGBHBtgMJAWDLI8FWV6M1fIeqDW4AdCQxSB89f7LfWsPXfm/9uBlknBsCzDYsVlevboLagVxwKZovotd6ZL/diWLScL25cuwWL6mA2os8QBoCFXKAWCwt0GNJA1QqSBqhhpHOqDUAUCfN0KNIg8AHaAJNGg+mTgXaswoGAWjYBSQCBgYAMLf0dVJBbU9AAAAAElFTkSuQmCC" InformativeScreenshot="1ee7957eae1f6c8688704961ddc6be72.png" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Purchase Order Confirmations Overview' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="780,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;## End - SAP_POSelection ##&quot;]" />
+  </Sequence>
+</Activity>
